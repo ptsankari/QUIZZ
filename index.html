@@ -4,20 +4,30 @@
         <style>
             p{
                 font-family: 'Lucida Sans';
-                background-color: antiquewhite;
+                background-color:whitesmoke;
                 color: black;
-                width:120px;
+                width: 130px;
+                border: solid;
+                border-color: brown;
+               
 
 
             }
 
             h4{
-                background-color: antiquewhite;
+                background-color:antiquewhite;
                 color: black;
                 font-family: 'Lucida Sans';
                 width:300px;
                 height: 30px;
+               
                 
+                
+            }
+
+            h5{
+                font-family:'Lucida Sans';
+                font-size: 16px;
             }
         </style>
         <title>
@@ -41,8 +51,8 @@
              
                 <div style="font-family: 'Lucida Sans';">
 
-                    <div id="question_1" style="border:solid;width:500px;">
-            <p>Which is not a fruit???</p>
+                    <div id="question_1" style="border:solid;width:500px;background-color: antiquewhite;">
+            <h5>Which is not a fruit?</h5>
             
             <div id="choises" style="width:300px;">
             <p style="float:left;"> <input type="radio" value="apple" name="ques1">Apple</input></p>
@@ -55,14 +65,14 @@
             <br>
             <br>
             <input type="button" onclick="view()" value="View answer"></input>
-            <p id="viewone"></p>
+            <h6 id="viewone"></h6>
              
                     </div>
 
 
          <br>
-         <div id="question_2" style="border:solid;width:500px;">
-         <p>Which colour is more radiant?</p>
+         <div id="question_2" style="border:solid;width:500px;background-color: antiquewhite;">
+         <h5>Which colour is more radiant?</h5>
          <div id="choises2" style="width:300px">
             <p style="float:left;"><input type="radio" value="Red" name="ques2">Red</input></p>
             <p style="float:right;"><input type="radio" value="White" name="ques2">White</input></p><br>
@@ -73,12 +83,12 @@
             <br>
             <br>
             <input type="button" onclick="view2()" value="View answer"></input>
-                <p id="viewtwo"></p>
+                <h6 id="viewtwo"></h6>
                 
 </div>
 
                 <br>
-                <p>Entomology is the science that studies?</p>
+                <h5>Entomology is the science that studies?</h5>
                 <input type="radio" value="rock" name="ques3">The formation of rocks</input>
             <input type="radio" value="inse" name="ques3">Insects</input>
             <input type="radio" value="Planets" name="ques3">Planets</input>
