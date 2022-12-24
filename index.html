@@ -1,17 +1,20 @@
 <!DOCTYPE html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width,initial-scale=0.1,user-scalable=none">
+       
+       <title>quiz</title>
+       </head>
         <style>
 
 
 body {
-  background-image: url("back.jpg");
+background-color:#5DADE2;
 }
 
             p{
                 font-family: 'Lucida Sans';
                
-                color:whitesmoke;
+                color:black;
                 width: 130px;
                 height: 25px;
                 
@@ -21,12 +24,13 @@ body {
             }
 
             h4{
-                background-color:grey;
-                color:whitesmoke;
-                font-family: 'Lucida Sans';
+                
+                color:black;
+                font-family:Trebuchet MS, sans-serif;
                width:300px;
                 height: 30px;
                 text-align: center;
+                font-size: 40px;
                
                 
                 
@@ -35,16 +39,16 @@ body {
             h5{
                 font-family:'Lucida Sans';
                 font-size: 20px;
-                color: whitesmoke;
+                color: black;
             }
 
             .buttondiv{
                 font-family: 'Lucida Sans';
                 font-size: 15px;
-                background-color:whitesmoke;
-                border-color: whitesmoke;
+                background-color:white;
+                border-color:black;
                 border-radius: 5px;
-                color: grey;
+                color:black;
                 width:160px;
                 height:30px;
                 text-align:center;
@@ -53,11 +57,16 @@ body {
             }
 
             h6{
-                color:whitesmoke;
+                color:black;
                 font-size:20px;
                 font-family: 'Lucida Sans';
+                
+
 
             }
+            
+      
+
         </style>
         <title>
             quizz app
@@ -66,7 +75,7 @@ body {
     <body>
 
 
-             <center><h4>RANDOM QUIZZ</h4></center>
+             <center><h4>QUIZZ</h4></center>
 
 
 
@@ -77,12 +86,10 @@ body {
 
              <center>
              <form id="quiz" name="quiz">
-             
-                <div style="font-family: 'Lucida Sans';">
-                    
-                    <div id="question_1" style="border:solid;width:400px;height:360px;background-color:grey;border-color:grey;">
+            
+                    <div id="question_1" style="border:solid;width:600px;background-color:whitesmoke;border-color:whitesmoke;">
                        
-                            
+                  
             <h5>Which is not a fruit?</h5>
             <div id="vline" style=" border-left: 8px solid whitesmoke;height:150px;">
             <div id="choises" style="width:300px;height:150px;text-align: justify;">
@@ -93,14 +100,18 @@ body {
         </div>
             </div>
             
-           <h6><input type="button" onclick="view()" value="View answer" class="buttondiv"></input></h6>
+           <h6><input type="button" onclick="view()" value="View answer" class="buttondiv"></input>
+            &nbsp;<input type="button" onclick="testfunction()" value="Next ->" class="buttondiv">
+        </h6>
             <h6 id="viewone"></h6>
              
                     </div>
+                  
 
 
-         <br>
-         <div id="question_2" style="border:solid;width:400px;background-color:grey;border-color: grey;">
+       
+         
+         <div id="question_2" style="border:solid;width:600px;background-color:whitesmoke;border-color:whitesmoke;display: none;">
          <h5>Which colour is more radiant?</h5>
          <div id="vline" style=" border-left: 8px solid whitesmoke;height:150px;">
          <div id="choises2" style="width:300px;height:150px;text-align: justify;">
@@ -114,13 +125,16 @@ body {
             <br>
             <br>
             <br>
-            <input type="button" onclick="view2()" value="View answer" class="buttondiv"></input>
+            <input type="button" onclick="prevfunction()" value="Prev" class="buttondiv">&nbsp;<input type="button" onclick="view2()" value="View answer" class="buttondiv"></input>
+            &nbsp;<input type="button" onclick="testfunction3()" value="Next ->" class="buttondiv">
                 <h6 id="viewtwo"></h6>
                 
             </div>
+            
 
-                <br>
-                <div id="question_3" style="border:solid;width:400px;background-color:grey;border-color:grey;">
+                
+               
+                <div id="question_3" style="border:solid;width:600px;background-color:whitesmoke;border-color:whitesmoke;display: none;">
                 <h5>Entomology is the science that studies?</h5>
                 <div id="vline" style=" border-left: 8px solid whitesmoke;height:160px;">
                 <div id="choises3" style="width:300px;height:150px;text-align: justify;">
@@ -133,11 +147,13 @@ body {
             <br>
             <br>
             <br>
+            <input type="button" onclick="prevfunction2()" value="Prev" class="buttondiv">&nbsp;
             <input type="button" onclick="view3()" value="View answer" class="buttondiv"></input>
                 <h6 id="viewthree"></h6>
                 </div>
-                    </div>
-            </ol>
+               
+                    
+            
              </form>
             
             </center>
@@ -146,12 +162,40 @@ body {
             
 
 
-        <center><input type="button" onclick="first()" value="Check"></input>
+        <center><input type="button" onclick="first()" value="CHECK"></input>
           <h6 id="correctt"></h6></center>
           
         
         
         <script>
+function testfunction() {
+    var T = document.getElementById("question_2");
+    T.style.display = "block"; 
+    var S= document.getElementById("question_1");
+    S.style.display = "none"; 
+}
+
+function testfunction3() {
+    var T = document.getElementById("question_3");
+    T.style.display = "block";
+    var O= document.getElementById("question_2");
+    O.style.display = "none";  // <-- Set it to block
+}
+
+function prevfunction(){
+    var P=document.getElementById("question_1");
+    P.style.display="block";
+    var A= document.getElementById("question_2");
+    A.style.display = "none"; 
+
+}
+function prevfunction2(){
+    var X=document.getElementById("question_2");
+    X.style.display="block";
+    var Y= document.getElementById("question_3");
+    Y.style.display = "none"; 
+}
+
             function first(){
                var ques1=document.quiz.ques1.value;
                var ques2=document.quiz.ques2.value;
@@ -196,7 +240,8 @@ body {
                }
 
 
-
+              
+ 
 
         </script>
 
