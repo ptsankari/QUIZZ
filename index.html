@@ -1,6 +1,6 @@
 <!DOCTYPE html>
     <head>
-        <meta name="viewport" content="width=device-width,initial-scale=0.1,user-scalable=none">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=none">
        
        <title>quiz</title>
        </head>
@@ -15,8 +15,8 @@ background-color:#5DADE2;
                 font-family: 'Lucida Sans';
                
                 color:black;
-                width: 130px;
                 height: 25px;
+                font-size:18px;
                 
                
 
@@ -49,7 +49,7 @@ background-color:#5DADE2;
                 border-color:black;
                 border-radius: 5px;
                 color:black;
-                width:160px;
+                width:130px;
                 height:30px;
                 text-align:center;
             
@@ -65,7 +65,19 @@ background-color:#5DADE2;
 
             }
             
-      
+      .buttondiv2{
+        font-family: 'Lucida Sans';
+                font-size: 15px;
+                background-color:white;
+                border-color:black;
+                border-radius: 20px;
+                color:black;
+                width:30px;
+                height:30px;
+                text-align:center;
+
+            
+      }
 
         </style>
         <title>
@@ -80,19 +92,17 @@ background-color:#5DADE2;
 
 
 
-             <img src="isro.jpg" id="image" style="display: none;"></img>
+             <!--<img src="isro.jpg" id="image" style="display: none;"></img>
 
-             <input type="button" onclick="img()" id="show" value="show image"></input>
+             <input type="button" onclick="img()" id="show" value="show image"></input>-->
 
              <center>
              <form id="quiz" name="quiz">
             
-                    <div id="question_1" style="border:solid;width:600px;background-color:whitesmoke;border-color:whitesmoke;">
-                       
-                  
+                <div id="question_1" style="border:solid;width:350px;background-color:whitesmoke;border-color:whitesmoke;">  
             <h5>Which is not a fruit?</h5>
             <div id="vline" style=" border-left: 8px solid whitesmoke;height:150px;">
-            <div id="choises" style="width:300px;height:150px;text-align: justify;">
+            <div id="choises" style="width:250px;height:150px;text-align: justify;">
             <p style="border-radius: 20px;"> <input type="radio" value="apple" name="ques1">Apple</input></p>
             <p style="border-radius: 20px;"><input type="radio" value="watermelon" name="ques1">Watermelom</input></p>
            <p style="border-radius: 20px;"><input type="radio" value="cabbage" name="ques1">Cabbage</input></p>
@@ -101,20 +111,18 @@ background-color:#5DADE2;
             </div>
             
            <h6><input type="button" onclick="view()" value="View answer" class="buttondiv"></input>
-            &nbsp;<input type="button" onclick="testfunction()" value="Next ->" class="buttondiv">
+            &nbsp;<input type="button" onclick="testfunction()" value=">" class="buttondiv2">
         </h6>
             <h6 id="viewone"></h6>
              
                     </div>
                   
 
-
-       
          
-         <div id="question_2" style="border:solid;width:600px;background-color:whitesmoke;border-color:whitesmoke;display: none;">
+         <div id="question_2" style="border:solid;width:350px;background-color:whitesmoke;border-color:whitesmoke;display: none;">
          <h5>Which colour is more radiant?</h5>
          <div id="vline" style=" border-left: 8px solid whitesmoke;height:150px;">
-         <div id="choises2" style="width:300px;height:150px;text-align: justify;">
+         <div id="choises2" style="width:250px;height:150px;text-align: justify;">
     
             <p style="border-radius: 20px;"><input type="radio" value="Red" name="ques2">Red</input></p>
             <p style="border-radius: 20px;"><input type="radio" value="White" name="ques2">White</input></p>
@@ -125,8 +133,8 @@ background-color:#5DADE2;
             <br>
             <br>
             <br>
-            <input type="button" onclick="prevfunction()" value="Prev" class="buttondiv">&nbsp;<input type="button" onclick="view2()" value="View answer" class="buttondiv"></input>
-            &nbsp;<input type="button" onclick="testfunction3()" value="Next ->" class="buttondiv">
+            <input type="button" onclick="prevfunction()" value="<" class="buttondiv2">&nbsp;<input type="button" onclick="view2()" value="View answer" class="buttondiv"></input>
+            &nbsp;<input type="button" onclick="testfunction3()" value=">" class="buttondiv2">
                 <h6 id="viewtwo"></h6>
                 
             </div>
@@ -134,10 +142,10 @@ background-color:#5DADE2;
 
                 
                
-                <div id="question_3" style="border:solid;width:600px;background-color:whitesmoke;border-color:whitesmoke;display: none;">
+                <div id="question_3" style="border:solid;width:350px;background-color:whitesmoke;border-color:whitesmoke;display: none;">
                 <h5>Entomology is the science that studies?</h5>
-                <div id="vline" style=" border-left: 8px solid whitesmoke;height:160px;">
-                <div id="choises3" style="width:300px;height:150px;text-align: justify;">
+                <div id="vline" style=" border-left: 8px solid whitesmoke;height:150px;">
+                <div id="choises3" style="width:250px;height:150px;text-align: justify;">
                 <p style="border-radius: 20px;width: fit-content;"><input type="radio" value="rock" name="ques3">The formation of rocks</input></p>
                 <p style="border-radius: 20px;"><input type="radio" value="inse" name="ques3">Insects</input></p>
                 <p style="border-radius: 20px;"><input type="radio" value="Planets" name="ques3">Planets</input></p>
@@ -147,7 +155,7 @@ background-color:#5DADE2;
             <br>
             <br>
             <br>
-            <input type="button" onclick="prevfunction2()" value="Prev" class="buttondiv">&nbsp;
+            <input type="button" onclick="prevfunction2()" value="<" class="buttondiv2">&nbsp;
             <input type="button" onclick="view3()" value="View answer" class="buttondiv"></input>
                 <h6 id="viewthree"></h6>
                 </div>
@@ -157,12 +165,9 @@ background-color:#5DADE2;
              </form>
             
             </center>
-           
-
-            
-
-
-        <center><input type="button" onclick="first()" value="CHECK"></input>
+    
+<br>
+        <center><input type="button" onclick="first()" value="SUBMIT" class="buttondiv"></input>
           <h6 id="correctt"></h6></center>
           
         
